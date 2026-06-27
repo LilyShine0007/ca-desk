@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Documents</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f5f8ff;
+}
+
+.container{
+width:800px;
+margin:auto;
+margin-top:50px;
+}
+
+.doc-row{
+background:white;
+padding:15px;
+margin:10px 0;
+border-radius:10px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.doc-row{
+transition:0.2s;
+}
+
+.doc-row:hover{
+transform:translateY(-2px);
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
+}
+
+.download-btn{
+background:#1e5eff;
+color:white;
+border:none;
+padding:8px 16px;
+border-radius:6px;
+cursor:pointer;
+font-size:14px;
+transition:0.2s;
+}
+
+.download-btn:hover{
+background:#1748c5;
+}
+
+h2{
+color:#363283;
+}
+
+.doc-actions{
+display:flex;
+gap:10px;
+}
+
+.view-btn{
+background:#1e5eff;
+color:white;
+border:none;
+padding:6px 12px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.view-btn:hover{
+background:#1748c5;
+}
+
+.download-btn{
+background:#28a745;
+color:white;
+border:none;
+padding:6px 12px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.download-btn:hover{
+background:#1e7e34;
+}
+
+.no-docs{
+text-align:center;
+padding:40px;
+color:#555;
+}
+
+.no-doc-icon{
+font-size:60px;
+margin-bottom:10px;
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Your Documents</h2>
+
+<div id="docList"></div>
+
+</div>
+
+<script type="module" src="client-documents.js"></script>
+
+</body>
+</html>

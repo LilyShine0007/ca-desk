@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CA Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+
+    <div class="top-row">
+
+      <!-- LEFT SIDE -->
+      <div class="welcome-section">
+        <h3>Welcome back,</h3>
+        <h1 id="adminName">CA Admin</h1>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="right-panel">
+
+        <!-- PROFILE ICON -->
+        <div class="profile-icon" onclick="goProfile()">
+          👤
+        </div>
+
+        <!-- BUTTONS SIDE BY SIDE -->
+        <div class="button-row">
+          <button class="top-btn" type="button" onclick="goAddClient()">
+            + New Client
+          </button>
+
+          <button class="top-btn" type="button" onclick="goAddEmployee()">
+            + New Employee
+          </button>
+          
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- STATS -->
+    <div class="stats">
+      <div class="stat-card">
+        <h2 id="totalClients">0</h2>
+        <p>Total Clients</p>
+      </div>
+
+      <div class="stat-card">
+        <h2 id="totalDocuments">0</h2>
+        <p>Total Documents</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MAIN SECTION -->
+  <div class="main">
+
+    <h2>Quick Actions</h2>
+
+    <!-- LONG BUTTONS -->
+    <div class="actions">
+<a href="upload-document.html" class="long-btn">
+  Upload Documents
+</a>      <button class="long-btn" type="button" onclick="goClients()">View Clients</button>
+    </div>
+
+    <h2>Document Categories</h2>
+
+    <div class="category" onclick="openGST()">
+      <div class="left">
+        <div class="icon">₹</div>
+        <div>
+          <strong>GST</strong>
+          <p>GST Returns & Filings</p>
+        </div>
+      </div>
+      <span id="gstCount">0 ></span>
+    </div>
+
+    <div class="category" onclick="openITR()">
+      <div class="left">
+        <div class="icon">📄</div>
+        <div>
+          <strong>ITR</strong>
+          <p>Income Tax Returns</p>
+        </div>
+      </div>
+      <span id="itrCount">0 ></span>
+    </div>
+
+    <div class="category" onclick="openTDS()">
+      <div class="left">
+        <div class="icon">💳</div>
+        <div>
+          <strong>TDS</strong>
+          <p>TDS Certificates</p>
+        </div>
+      </div>
+      <span id="tdsCount">0 ></span>
+    </div>
+
+  </div>
+
+  <!-- NAVIGATION SCRIPT -->
+  <script>
+    function goAddClient(){
+      window.location.href = "add-client.html";
+    }
+
+    function goUpload(){
+      window.location.href = "upload-document.html";
+    }
+
+    function goClients(){
+      window.location.href = "view-clients.html"; // create later if needed
+    }
+
+    function goAddEmployee(){
+      window.location.href = "add-employee.html"; // create later
+    }
+
+    function goProfile(){
+      window.location.href = "admin_profile.html"; // optional
+    }
+  </script>
+
+<script type="module" src="admin-dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+/* ===== ADMIN LOGIN THEME ===== */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #0f172a,#0a3a65);
+    height: 100vh;
+}
+
+/* Top Back Area */
+.top-bar {
+    padding: 20px;
+}
+
+.back-btn {
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    color: white;
+    margin-top: 60px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Card */
+.card {
+    background: #f3f3f3;
+    padding: 35px;
+    max-width: 360px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+/* Inputs */
+.card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Button */
+.btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    background: #2ea3f2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #1b8ed6;
+    transform: scale(1.05);
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-weight: bold;
+    display: none;
+}

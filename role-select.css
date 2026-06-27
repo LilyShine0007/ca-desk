@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+}
+
+.login-btn {
+    background: #6c63ff;
+    color: white !important;
+    padding: 8px 18px;
+    border-radius: 6px;
+}
+
+/* Main Section */
+.role-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.role-section h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.role-section p {
+    color: #777;
+    margin-bottom: 50px;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Cards */
+.card {
+    width: 280px;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    color: #141414;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Individual Card Backgrounds */
+.card.admin {
+    background: #e6e4ff;
+}
+
+.card.employee {
+    background: #d4f8e8;
+}
+
+.card.client {
+    background: #ffe5d0;
+}
+
+.card h3 {
+    margin: 15px 0;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Icons */
+.icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.back-btn-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-btn {
+    padding: 10px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #6c63ff;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #574fd6;
+}

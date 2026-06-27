@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Select GST Documents</title>
+<link rel="stylesheet" href="client-dashboard.css">
+
+<style>
+
+body{
+background:#f0f6ff;
+font-family:Arial;
+}
+
+.container{
+width:70%;
+margin:auto;
+margin-top:60px;
+}
+
+.option{
+background:white;
+padding:20px;
+margin-top:20px;
+border-radius:10px;
+cursor:pointer;
+border-left:6px solid #007bff;
+}
+
+.option:hover{
+background:#e8f0ff;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Select GST Documents</h2>
+
+<div class="option" onclick="openDocs('1year')">
+Last 1 Year
+</div>
+
+<div class="option" onclick="openDocs('2year')">
+Last 2 Years
+</div>
+
+<div class="option" onclick="openDocs('both')">
+Both Years
+</div>
+
+</div>
+
+<script>
+
+function openDocs(type){
+
+window.location.href =
+`client-gst.html?type=${type}`
+
+}
+
+</script>
+
+</body>
+</html>

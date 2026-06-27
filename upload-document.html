@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<title>Upload Document</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f5f9ff;
+padding:40px;
+}
+
+.container{
+background:white;
+padding:30px;
+width:400px;
+margin:auto;
+border-radius:8px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h2{
+text-align:center;
+color:#1e5eff;
+}
+
+label{
+display:block;
+margin-top:15px;
+font-weight:bold;
+}
+
+select,input{
+width:100%;
+padding:10px;
+margin-top:5px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+margin-top:20px;
+width:100%;
+padding:12px;
+background:#344c89;
+color:white;
+border:none;
+border-radius:5px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1748c5;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Upload Document</h2>
+
+<label>Select Client</label>
+<select id="clientSelect">
+<option value="">Select Client</option>
+</select>
+
+
+<label>Service</label>
+<select id="service">
+<option value="">Select Service</option>
+<option value="GST">GST</option>
+<option value="ITR">ITR</option>
+<option value="TDS">TDS</option>
+</select>
+
+
+<label>Document Title</label>
+<input type="text" id="docTitle" placeholder="Example: GST Return">
+
+
+<label>Year</label>
+<input type="number" id="year" placeholder="Example: 2025">
+
+
+<label>Google Drive Link</label>
+<input type="text" id="driveLink" placeholder="Paste Drive Link">
+
+
+<button id="uploadBtn">
+Upload Document
+</button>
+
+</div>
+
+<script type="module" src="upload-document.js"></script>
+
+</body>
+</html>

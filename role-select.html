@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login As</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="index.html" class="back-btn">← Back </a>
+
+    <!-- Role Section -->
+    <section class="hero">
+        <h1>Choose Your Role</h1>
+        <p>Select how you want to access the application</p>
+    </section>
+
+    <section class="features">
+        <div class="card-container">
+
+            <!-- Admin -->
+            <div class="role-card">
+                <div class="icon">🛡️</div>
+                <h2 style="color:#272728;">Admin</h2><br>
+                <p class="role">Chartered Accountant</p>
+                <p class="desc">Upload and manage all client documents</p>
+                <button class="btn" onclick="goToAdminLogin()">Continue →</button>
+            </div>
+
+            <!-- Employee -->
+            <div class="role-card employee-card">
+
+   
+
+    <div class="icon">👥</div>
+    <h2 style="color:#272728;">Employee</h2><br>
+
+    <p class="role">Staff Access</p>
+
+    <p class="desc">
+        Manage assigned clients and upload documents
+    </p>
+
+    <button class="btn disabled-btn">Coming Soon</button>
+
+</div>
+
+            <!-- Client -->
+            <div class="role-card">
+                <div class="icon">👤</div>
+                <h2 style="color:#272728;">Client</h2><br>
+                <p class="role">Document Access</p>
+                <p class="desc">View and download your tax documents</p>
+                <button class="btn" onclick="goToClientLogin()">Continue →</button>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-container {
+    background: rgb(208, 228, 240);
+    padding: 25px;
+    border-radius: 18px;
+    width: 380px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.profile-card {
+    text-align: center;
+}
+
+.profile-icon {
+    font-size: 60px;
+    background: #e0e7ff;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+h2 {
+    margin: 12px 0 20px;
+    color: #333;
+}
+
+/* Info Box Style */
+.profile-box {
+    display: flex;
+    align-items: center;
+    background: #f6f7fb;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.profile-box .icon {
+    font-size: 22px;
+    background: #ada8e7;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 12px;
+}
+
+.profile-box small {
+    color: gray;
+    font-size: 12px;
+}
+
+.profile-box p {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 2px 0 0;
+}
+
+/* Buttons */
+.btn-group {
+    margin-top: 15px;
+}
+
+.edit-btn, .logout-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+/* Edit Button */
+.edit-btn {
+    background: #5263b0;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #2e3aab;
+}
+
+/* Logout Button */
+.logout-btn {
+    background: #f64b4b;
+    color: white;
+}
+
+.logout-btn:hover {
+    background: #c50e1a;
+}
+.edit-btn {
+    margin-right: 15px;   /* gap between buttons */
+}

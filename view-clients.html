@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Clients</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+font-family: "Segoe UI", Arial;
+background:#f5f7fb;
+margin:0;
+padding:30px;
+}
+
+/* TITLE */
+
+h2{
+margin-bottom:20px;
+}
+
+/* SEARCH */
+
+.search-box{
+margin-bottom:25px;
+}
+
+.search-box input{
+width:100%;
+max-width:600px;
+padding:14px;
+border-radius:8px;
+border:1px solid #ddd;
+font-size:15px;
+box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+
+
+/* CLIENT LIST */
+
+.client-list{
+background:white;
+border-radius:12px;
+box-shadow:0 4px 14px rgba(0,0,0,0.08);
+overflow:hidden;
+}
+
+
+/* ROW */
+
+.client-row{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:16px 20px;
+border-bottom:1px solid #eee;
+transition:0.2s;
+}
+
+.client-row:hover{
+background:#f8fbff;
+}
+
+
+/* LEFT SIDE */
+
+.client-left{
+display:flex;
+align-items:center;
+gap:14px;
+cursor:pointer;
+}
+
+.avatar{
+width:42px;
+height:42px;
+border-radius:50%;
+background:#42519b;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:600;
+font-size:16px;
+}
+
+.client-name{
+font-weight:600;
+font-size:16px;
+}
+
+.client-email{
+font-size:13px;
+color:#777;
+}
+
+
+/* BADGES */
+
+.badges{
+display:flex;
+gap:10px;
+}
+
+.badge{
+padding:6px 12px;
+border-radius:20px;
+font-size:12px;
+font-weight:600;
+color:white;
+}
+
+.gst{
+background:#2979ff;
+}
+
+.itr{
+background:#7b3fe4;
+}
+
+.tds{
+background:#00a86b;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Clients</h2>
+
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Search client name or email">
+</div>
+
+<div class="client-list" id="clientContainer"></div>
+
+<script type="module" src="view-clients.js"></script>
+
+</body>
+</html>

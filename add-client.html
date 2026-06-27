@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add Client</title>
+
+<style>
+body {
+  font-family: Arial;
+  background:#f4f6f9;
+  display:flex;
+  justify-content:center;
+  padding-top:60px;
+}
+
+form {
+  background:white;
+  padding:30px;
+  width:350px;
+  border-radius:10px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+input, button {
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  border-radius:5px;
+  border:1px solid #ccc;
+}
+
+button {
+  background:#0f4c81;
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+
+button:hover {
+  background:#1f75fe;
+}
+
+.success { color:green; }
+.error { color:red; }
+</style>
+
+</head>
+<body>
+
+<form id="clientForm">
+  <h2>Add New Client</h2>
+
+  <input type="text" id="clientName" placeholder="Client Name">
+<small id="nameError" class="error"></small>
+
+<input type="text" id="clientEmail" placeholder="Client Email">
+<small id="emailError" class="error"></small>
+
+<input type="password" id="clientPassword" placeholder=" Password">
+<small id="passError" class="error"></small>
+
+  <button type="submit">Create Client</button>
+  <p id="msg"></p>
+</form>
+
+<script type="module">
+
+import { auth, db } from "./firebase.js";
+
+import { createUserWithEmailAndPassword }
+from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+import { doc, setDoc }
+from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+const form = document.getElementById("clientForm");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("clientName").value.trim();
+const email = document.getElementById("clientEmail").value.trim();
+const password = document.getElementById("clientPassword").value.trim();
+
+const nameError = document.getElementById("nameError");
+const emailError = document.getElementById("emailError");
+const passError = document.getElementById("passError");
+
+nameError.innerText = "";
+emailError.innerText = "";
+passError.innerText = "";
+
+let isValid = true;
+
+// ✅ Name required
+if (name === "") {
+  nameError.innerText = "Name required";
+  isValid = false;
+}
+
+// ✅ Email required
+if (email === "") {
+  emailError.innerText = "Email required";
+  isValid = false;
+}
+else if (!email.includes("@") || !email.includes(".")) {
+  emailError.innerText = "Enter valid email";
+  isValid = false;
+}
+
+// ✅ Password required
+if (password === "") {
+  passError.innerText = "Password required";
+  isValid = false;
+}
+else if (password.length < 6) {
+  passError.innerText = "Password must be at least 6 characters";
+  isValid = false;
+}
+
+// stop if any error
+if (!isValid) return;
+
+  try {
+
+    // 1️⃣ Create Auth Account
+    const userCredential =
+      await createUserWithEmailAndPassword(auth, email, password);
+
+    const user = userCredential.user;
+
+    // 2️⃣ Save in Firestore with SAME UID
+    await setDoc(doc(db, "clients", user.uid), {
+      name: name,
+      email: email,
+      role: "client",
+      createdAt: new Date()
+    });
+
+    alert("Client Created Successfully ✅");
+
+    form.reset();
+
+  } catch (error) {
+    alert(error.message);
+  }
+
+});
+</script>
+</body>
+</html>

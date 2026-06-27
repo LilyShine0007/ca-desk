@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Documents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+font-family:Segoe UI;
+background:#f5f7fb;
+padding:30px;
+}
+
+h2{
+margin-bottom:20px;
+}
+
+/* TABLE */
+
+.doc-table{
+width:100%;
+background:white;
+border-radius:10px;
+box-shadow:0 3px 12px rgba(0,0,0,0.08);
+border-collapse:collapse;
+overflow:hidden;
+}
+
+.doc-table th{
+background:#808182;
+text-align:left;
+padding:12px;
+font-size:14px;
+}
+
+.doc-table td{
+padding:12px;
+border-bottom:1px solid #eee;
+font-size:14px;
+}
+
+.doc-table tr:hover{
+background:#f9fbff;
+}
+
+/* BUTTONS */
+
+.view-btn{
+background:#4a5488;
+color:white;
+border:none;
+padding:6px 12px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.download-btn{
+background:#28a745;
+color:white;
+border:none;
+padding:6px 12px;
+border-radius:6px;
+cursor:pointer;
+margin-left:6px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2 id="pageTitle"></h2>
+
+<table class="doc-table">
+
+<thead>
+<tr>
+<th>Client</th>
+<th>Document</th>
+<th>Year</th>
+<th>Actions</th>
+</tr>
+</thead>
+
+<tbody id="docList"></tbody>
+
+</table>
+
+<script type="module" src="admin-category-docs.js"></script>
+
+</body>
+</html>

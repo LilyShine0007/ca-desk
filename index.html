@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CA Client Documents Access</title>
+
+<link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="logo">
+        📄 CA Docs
+    </div>
+
+    <div class="menu-container">
+        <button class="menu-btn" id="menuBtn">⋮</button>
+
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="help.html">Help</a>
+            <a href="about.html">About Us</a>
+            <a href="documentation.html">Documentation</a>
+        </div>
+    </div>
+
+</nav>
+
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+
+
+
+<h1 style="color:rgb(118,223,221);">CADesk</h1>
+<h2>CA Client Documents access</h2>
+
+<br>
+
+<p>
+A secure and modern platform for Chartered Accountants to manage
+and share tax documents with their clients seamlessly.
+</p>
+
+<br>
+
+<a href="role-select.html" style="text-decoration:none;">
+<button class="btn">Get Started</button>
+</a>
+
+</section>
+
+
+<!-- FEATURES -->
+<section class="features">
+
+<div class="card">
+<div class="icon">📁</div>
+<h3>Easy Document Access</h3>
+<p>View and download your GST, ITR and TDS documents in one secure place.</p>
+</div>
+
+<div class="card">
+<div class="icon">🔐</div>
+<h3>Secure & Private</h3>
+<p>Your documents are protected with secure login and only accessible to you.</p>
+</div>
+
+<div class="card">
+<div class="icon">👥</div>
+<h3>Client Portal</h3>
+<p>Access your important financial documents anytime, anywhere with ease.</p>
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+© 2025-26 CA Client Documents Access | TYBCA Academic Project
+</footer>
+
+
+<!-- MENU SCRIPT -->
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const btn = document.getElementById("menuBtn");
+const menu = document.getElementById("dropdownMenu");
+
+btn.addEventListener("click", function(){
+
+if(menu.style.display === "block"){
+menu.style.display = "none";
+}else{
+menu.style.display = "block";
+}
+
+});
+
+});
+
+</script>
+
+<link rel="stylesheet" href="index.css">
+
+</body>
+</html>

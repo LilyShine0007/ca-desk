@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add New Employee</title>
+  <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="top-row">
+      <div>
+        <h2>Add New Employee</h2>
+      </div>
+
+      <div class="button-row">
+        <a href="admin-dashboard.html" class="top-btn">← Back to Dashboard</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+
+    <div class="form-container">
+
+      <form id="employeeForm">
+
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="empName" required>
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="empEmail" required>
+        </div>
+
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="text" id="empPhone" required>
+        </div>
+
+        <div class="form-group">
+          <label>Role</label>
+          <input type="text" id="empRole" placeholder="Accountant / Manager / Staff">
+        </div>
+
+        <button type="submit" class="submit-btn">Add Employee</button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById("employeeForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      alert("Employee Added Successfully ✅");
+
+      // clear form
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>

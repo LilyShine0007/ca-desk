@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Profile</title>
+<link rel="stylesheet" href="admin_profile.css">
+</head>
+
+<body>
+
+<div class="profile-container">
+    <div class="profile-card">
+
+        <!-- Icon -->
+        <div class="profile-icon">👤</div>
+        <h2>Admin Profile</h2>
+
+        <!-- Name -->
+        <div class="profile-box">
+            <span class="icon">👨‍💼</span>
+            <div>
+                <small>Name</small>
+                <p id="adminName">CA Admin</p>
+            </div>
+        </div>
+
+        <!-- Email -->
+        <div class="profile-box">
+            <span class="icon">📧</span>
+            <div>
+                <small>Email</small>
+                <p id="adminEmail">admin@gmail.com</p>
+            </div>
+        </div>
+
+        <!-- Role -->
+        <div class="profile-box">
+            <span class="icon">🛡</span>
+            <div>
+                <small>Role</small>
+                <p id="adminRole">Administrator</p>
+            </div>
+        </div>
+
+        <!-- Logout -->
+        <div class="btn-group">
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+
+    </div>
+</div>
+
+<script type="module" src="admin_profile.js"></script>
+
+
+
+</body>
+</html>

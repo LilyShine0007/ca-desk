@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Client Documents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+font-family:Segoe UI;
+background:#f5f7fb;
+padding:30px;
+}
+
+/* CLIENT PROFILE */
+
+.client-profile{
+display:flex;
+align-items:center;
+gap:15px;
+margin-bottom:25px;
+}
+
+.avatar{
+width:50px;
+height:50px;
+border-radius:50%;
+background:#3a426c;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:18px;
+font-weight:600;
+}
+
+.client-name{
+font-size:20px;
+font-weight:600;
+}
+
+.client-email{
+color:#777;
+font-size:14px;
+}
+
+
+/* SUMMARY CARDS */
+
+.summary{
+display:flex;
+gap:15px;
+margin-bottom:30px;
+}
+
+.card{
+background:white;
+padding:18px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.08);
+width:120px;
+text-align:center;
+}
+
+.card h3{
+margin:0;
+font-size:14px;
+color:#777;
+}
+
+.card h1{
+margin:6px 0 0;
+}
+
+
+/* DOCUMENT LIST */
+
+.doc-list{
+background:white;
+border-radius:10px;
+box-shadow:0 3px 12px rgba(0,0,0,0.08);
+overflow:hidden;
+}
+
+.doc-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 20px;
+border-bottom:1px solid #eee;
+}
+
+.doc-title{
+font-weight:500;
+}
+
+.doc-actions button{
+margin-left:8px;
+padding:6px 12px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.view-btn{
+background:#3e4b8f;
+color:white;
+}
+
+.download-btn{
+background:#28a745;
+color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="client-profile">
+
+<div class="avatar" id="avatar"></div>
+
+<div>
+<div class="client-name" id="clientName"></div>
+<div class="client-email" id="clientEmail"></div>
+</div>
+
+</div>
+
+
+<div class="summary">
+
+<div class="card">
+<h3>GST</h3>
+<h1 id="gstCount">0</h1>
+</div>
+
+<div class="card">
+<h3>ITR</h3>
+<h1 id="itrCount">0</h1>
+</div>
+
+<div class="card">
+<h3>TDS</h3>
+<h1 id="tdsCount">0</h1>
+</div>
+
+</div>
+
+
+<div class="doc-list" id="docList"></div>
+
+
+<script type="module" src="admin-client-docs.js"></script>
+
+</body>
+</html>

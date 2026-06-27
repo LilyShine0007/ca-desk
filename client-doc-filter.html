@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Select Documents</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f0f5ff;
+}
+
+.container{
+width:500px;
+margin:auto;
+margin-top:100px;
+}
+
+.option{
+background:white;
+padding:20px;
+margin:20px 0;
+border-radius:10px;
+border-left:6px solid #465f9b;
+cursor:pointer;
+font-size:18px;
+}
+
+.option:hover{
+background:#e6edff;
+}
+
+h2{
+text-align:center;
+color:#465f9b;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Select Documents</h2>
+
+<div class="option" onclick="openDocs('1year')">
+Last 1 Year
+</div>
+
+<div class="option" onclick="openDocs('2year')">
+Last 2 Years
+</div>
+
+<div class="option" onclick="openDocs('both')">
+Both Years
+</div>
+
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search)
+const service = params.get("service")
+
+function openDocs(type){
+
+window.location.href =
+`client-documents.html?service=${service}&type=${type}`
+
+}
+
+</script>
+
+</body>
+</html>

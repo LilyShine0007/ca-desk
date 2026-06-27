@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Client Profile</title>
+<link rel="stylesheet" href="client_profile.css">
+</head>
+
+<body>
+
+<div class="profile-container">
+    <div class="profile-card">
+
+        <!-- Profile Icon -->
+        <div class="profile-icon">👤</div>
+
+        <h2>Client Profile</h2>
+
+        <!-- Client Name -->
+        <div class="profile-box">
+            <div class="icon">👨‍💼</div>
+            <div>
+                <small>Name</small>
+                <p id="clientName">Client User</p>
+            </div>
+        </div>
+
+        <!-- Client Email -->
+        <div class="profile-box">
+            <div class="icon">📧</div>
+            <div>
+                <small>Email</small>
+                <p id="clientEmail">client@gmail.com</p>
+            </div>
+        </div>
+
+        <!-- Logout Button -->
+        <div class="btn-group">
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+
+    </div>
+</div>
+
+<script type="module" src="client_profile.js"></script>
+
+</body>
+</html>
